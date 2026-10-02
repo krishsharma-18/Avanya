@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Special Surprise For My Sister 💗</title>
+
+
+<style>
+
+/* ================= GENERAL ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#fff5fa,#ffd6e8);
+    color:#d63384;
+    overflow-x:hidden;
+}
+
+.page{
+    display:none;
+    min-height:100vh;
+    padding:40px 20px;
+    text-align:center;
+    animation:pageOpen 0.8s ease;
+}
+
+.page.active{
+    display:block;
+}
+
+@keyframes pageOpen{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+h1{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.subtitle{
+    font-size:18px;
+    color:#9c3d6d;
+    margin-bottom:35px;
+}
+
+
+/* ================= PAGE 1 ================= */
+
+.gallery{
+    max-width:1100px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:20px;
+}
+
+.photo-card{
+    background:white;
+    padding:10px;
+    border-radius:25px;
+
+    box-shadow:0 8px 25px rgba(214,51,132,0.25);
+
+    cursor:pointer;
+
+    transition:0.4s;
+}
+
+.photo-card:hover{
+    transform:translateY(-12px) scale(1.04);
+    box-shadow:0 15px 35px rgba(214,51,132,0.35);
+}
+
+.photo-card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+.photo-card h3{
+    padding:15px 5px 8px;
+}
+
+
+/* ================= PAGE 2 ================= */
+
+.teddy-container{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.teddy-card{
+    width:300px;
+    background:white;
+    padding:15px;
+
+    border-radius:30px;
+
+    box-shadow:0 10px 30px rgba(214,51,132,0.25);
+
+    cursor:pointer;
+
+    transition:0.5s;
+}
+
+.teddy-card:hover{
+    transform:scale(1.08) rotate(-2deg);
+}
+
+.teddy-card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:25px;
+}
+
+.teddy-card h2{
+    margin:15px 0 5px;
+}
+
+
+/* ================= PAGE 3 ================= */
+
+.surprise-box{
+    max-width:700px;
+    margin:40px auto;
+
+    background:white;
+
+    padding:40px 25px;
+
+    border-radius:35px;
+
+    box-shadow:0 10px 40px rgba(214,51,132,0.3);
+}
+
+.gift{
+    font-size:120px;
+    cursor:pointer;
+
+    animation:bounce 1.5s infinite;
+}
+
+@keyframes bounce{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-20px);
+    }
+}
+
+.click-text{
+    margin-top:10px;
+    font-size:20px;
+}
+
+#message{
+    display:none;
+    margin-top:30px;
+
+    animation:messageOpen 1.5s ease;
+}
+
+@keyframes messageOpen{
+
+    from{
+        opacity:0;
+        transform:scale(0.5);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+#message img{
+    width:220px;
+    height:220px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:7px solid #ffb6d5;
+
+    box-shadow:0 0 30px #ff9ac5;
+}
+
+#message h2{
+    margin:20px 0;
+    font-size:32px;
+}
+
+#message p{
+    font-size:19px;
+    line-height:1.8;
+    color:#8e3765;
+}
+
+
+/* ================= BUTTON ================= */
+
+button{
+    margin-top:35px;
+
+    padding:14px 30px;
+
+    border:none;
+    border-radius:30px;
+
+    background:#ec4899;
+    color:white;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+button:hover{
+    background:#c02675;
+    transform:scale(1.08);
+}
+
+
+/* ================= FLOATING HEARTS ================= */
+
+.heart{
+    position:fixed;
+
+    bottom:-40px;
+
+    font-size:25px;
+
+    pointer-events:none;
+
+    animation:heartFloat 6s linear forwards;
+
+    z-index:100;
+}
+
+@keyframes heartFloat{
+
+    0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+    .gallery{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:550px){
+
+    h1{
+        font-size:28px;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    .photo-card img{
+        height:350px;
+    }
+
+    .teddy-card{
+        width:90%;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================================================= -->
+<!--                    PAGE 1                         -->
+<!-- ================================================= -->
+
+<section id="page1" class="page active">
+
+    <h1>💗 My Beautiful Sister 💗</h1>
+
+    <p class="subtitle">
+
+        A little surprise made specially for you 🥰
+
+        <br>
+
+        Click on any picture ❤️
+
+    </p>
+
+
+    <div class="gallery">
+
+
+        <!-- PHOTO 1 -->
+
+        <div class="photo-card" onclick="openPage2()">
+
+            <img src="av1.jpeg">
+
+            <h3>🌸 Beautiful Smile 🌸</h3>
+
+        </div>
+
+
+        <!-- PHOTO 2 -->
+
+        <div class="photo-card" onclick="openPage2()">
+
+            <img src="av2.jpeg">
+
+            <h3>💕 My Lovely Sister 💕</h3>
+
+        </div>
+
+
+        <!-- PHOTO 3 -->
+
+        <div class="photo-card" onclick="openPage2()">
+
+            <img src="av3.jpeg">
+
+            <h3>👑 My Princess 👑</h3>
+
+        </div>
+
+
+        <!-- PHOTO 4 -->
+
+        <div class="photo-card" onclick="openPage2()">
+
+            <img src="av4.jpeg">
+
+            <h3>🦋 Special Memories 🦋</h3>
+
+        </div>
+
+
+        <!-- PHOTO 5 -->
+
+        <div class="photo-card" onclick="openPage2()">
+
+            <img src="av5.jpeg">
+
+            <h3>❤️ Forever Special ❤️</h3>
+
+        </div>
+
+
+    </div>
+
+
+    <p style="margin-top:35px;">
+
+        Made with ❤️ especially for you
+
+    </p>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!--                    PAGE 2                         -->
+<!-- ================================================= -->
+
+<section id="page2" class="page">
+
+    <h1>🧸 Choose Your Teddy 🧸</h1>
+
+    <p class="subtitle">
+
+        Two little teddy bears are waiting for you...
+
+        <br>
+
+        Click on one to discover your surprise 💝
+
+    </p>
+
+
+    <div class="teddy-container">
+
+
+        <!-- TEDDY 1 -->
+
+        <div class="teddy-card" onclick="openPage3()">
+
+            <img src="teddy1.jpg">
+
+            <h2>💗 Pink Teddy</h2>
+
+            <p>A little teddy full of love</p>
+
+        </div>
+
+
+        <!-- TEDDY 2 -->
+
+        <div class="teddy-card" onclick="openPage3()">
+
+            <img src="teddy2.jpg">
+
+            <h2>🧸 Cute Teddy</h2>
+
+            <p>A special surprise is waiting</p>
+
+        </div>
+
+
+    </div>
+
+
+    <button onclick="openPage1()">
+
+        ⬅ Go Back
+
+    </button>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!--                    PAGE 3                         -->
+<!-- ================================================= -->
+
+<section id="page3" class="page">
+
+    <h1>🎀 A Special Surprise 🎀</h1>
+
+    <p class="subtitle">
+
+        Something special is waiting just for you...
+
+    </p>
+
+
+    <div class="surprise-box">
+
+
+        <!-- GIFT -->
+
+        <div class="gift" onclick="showSurprise()">
+
+            🎁
+
+        </div>
+
+
+        <div class="click-text">
+
+            ✨ Click the gift ✨
+
+        </div>
+
+
+        <!-- MESSAGE -->
+
+        <div id="message">
+
+
+            <img src="av1.jpeg">
+
+
+            <h2>
+
+                💖 Dear Sister 💖
+
+            </h2>
+
+
+            <p>
+
+                You are one of the most beautiful
+
+                gifts in my life. 🌸
+
+                <br><br>
+
+                Your smile makes every day brighter. ☀️
+
+                <br><br>
+
+                Thank you for always being
+
+                such a wonderful sister. 💕
+
+                <br><br>
+
+                No matter what happens,
+
+                always keep smiling. 🥰
+
+                <br><br>
+
+                You will always have a special
+
+                place in my heart. ❤️
+
+                <br><br>
+
+                Love you forever, my lovely sister! 🧸💗
+
+            </p>
+
+
+            <h1 style="margin-top:25px;">
+
+                ❤️ Love You ❤️
+
+            </h1>
+
+
+        </div>
+
+
+    </div>
+
+
+    <button onclick="openPage2()">
+
+        ⬅ Go Back
+
+    </button>
+
+</section>
+
+
+
+<script>
+
+
+/* ================= PAGE FUNCTIONS ================= */
+
+
+function hideAllPages(){
+
+    document.querySelectorAll(".page").forEach(function(page){
+
+        page.classList.remove("active");
+
+    });
+
+}
+
+
+function openPage1(){
+
+    hideAllPages();
+
+    document.getElementById("page1").classList.add("active");
+
+    window.scrollTo(0,0);
+
+}
+
+
+function openPage2(){
+
+    hideAllPages();
+
+    document.getElementById("page2").classList.add("active");
+
+    window.scrollTo(0,0);
+
+}
+
+
+function openPage3(){
+
+    hideAllPages();
+
+    document.getElementById("page3").classList.add("active");
+
+    window.scrollTo(0,0);
+
+}
+
+
+
+/* ================= SURPRISE ================= */
+
+
+function showSurprise(){
+
+    document.getElementById("message").style.display="block";
+
+    document.querySelector(".gift").innerHTML="💝";
+
+    createHearts();
+
+}
+
+
+
+/* ================= FLOATING HEARTS ================= */
+
+
+function createHearts(){
+
+    for(let i=0;i<35;i++){
+
+        let heart=document.createElement("div");
+
+        heart.className="heart";
+
+        let hearts=[
+
+            "❤️",
+            "💕",
+            "💗",
+            "💖",
+            "💝",
+            "🌸"
+
+        ];
+
+        heart.innerHTML=
+
+            hearts[Math.floor(Math.random()*hearts.length)];
+
+
+        heart.style.left=
+
+            Math.random()*100+"vw";
+
+
+        heart.style.animationDelay=
+
+            Math.random()*2+"s";
+
+
+        heart.style.fontSize=
+
+            (18+Math.random()*20)+"px";
+
+
+        document.body.appendChild(heart);
+
+
+        setTimeout(function(){
+
+            heart.remove();
+
+        },7000);
+
+    }
+
+}
+
+
+
+/* ================= CONTINUOUS HEARTS ================= */
+
+
+setInterval(function(){
+
+    let heart=document.createElement("div");
+
+    heart.className="heart";
+
+    heart.innerHTML="💕";
+
+    heart.style.left=
+
+        Math.random()*100+"vw";
+
+    document.body.appendChild(heart);
+
+
+    setTimeout(function(){
+
+        heart.remove();
+
+    },6000);
+
+
+},1200);
+
+
+</script>
+
+
+</body>
+
+</html>
